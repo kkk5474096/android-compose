@@ -3,8 +3,6 @@ package com.backpac.composeandroid.guide
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.animation.animateColorAsState
-import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -55,9 +53,6 @@ private fun MessageCard(msg: Message) {
         Spacer(modifier = Modifier.width(8.dp))
 
         var isExpanded by remember { mutableStateOf(false) }
-        val surfaceColor by animateColorAsState(
-            if (isExpanded) MaterialTheme.colors.primary else MaterialTheme.colors.surface
-        )
 
         Column(modifier = Modifier.clickable { isExpanded = !isExpanded }) {
             Text(
