@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.backpac.composeandroid">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,23 +18,27 @@
         <activity
             android:name=".layout.LayoutActivity"
             android:exported="true"
-            android:theme="@style/Theme.ComposeAndroid" >
+            android:theme="@style/Theme.ComposeAndroid">
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeAndroid" />
+        <activity
+            android:name=".guide.GuideActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".list.ListActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.ComposeAndroid">
-
-        </activity>
-        <activity
-            android:name=".guide.GuideActivity"
-            android:exported="true"></activity>
     </application>
 
 </manifest>
