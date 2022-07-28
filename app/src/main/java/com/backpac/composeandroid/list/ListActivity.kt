@@ -9,11 +9,13 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
 import com.backpac.composeandroid.ui.theme.ComposeAndroidTheme
@@ -70,7 +72,7 @@ fun ListApp() {
                 Text(text = "Scroll to the top")
             }
 
-            Button(
+            OutlinedButton(
                 onClick = {
                     coroutineScope.launch {
                         scrollState.animateScrollToItem(itemSize - 1)
@@ -87,4 +89,10 @@ fun ListApp() {
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun Preview() {
+    ListApp()
 }
