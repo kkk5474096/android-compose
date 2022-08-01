@@ -61,7 +61,7 @@ val topics = listOf(
 
 @Composable
 fun BodyContent(modifier: Modifier = Modifier) {
-    StaggerGrid(modifier) {
+    StaggerGrid(modifier, rows = 5) {
         for (topic in topics) {
             Chip(modifier = Modifier.padding(8.dp), text = topic)
         }
