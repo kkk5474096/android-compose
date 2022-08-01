@@ -32,7 +32,10 @@
 
         <activity
             android:name=".list.ListActivity"
-            android:exported="true">
+            android:exported="true" />
+
+        <activity android:name=".stagger.StaggerActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
