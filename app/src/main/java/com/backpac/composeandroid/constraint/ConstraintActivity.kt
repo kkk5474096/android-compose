@@ -10,6 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
+import androidx.constraintlayout.compose.atLeast
 import com.backpac.composeandroid.ui.theme.ComposeAndroidTheme
 
 class ConstraintActivity : ComponentActivity() {
@@ -53,10 +55,24 @@ fun ConstraintContent() {
     }
 }
 
+@Composable
+fun LargeConstraintLayout() {
+    ConstraintLayout {
+        val text = createRef()
+        
+        val guideline = createGuidelineFromStart(fraction = 0.5f)
+        Text(text = "This is a very very very very very very very long text",
+        Modifier.constrainAs(text) {
+            linkTo(guideline, parent.end)
+            width = Dimension.preferredWrapContent
+        })
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
 fun Preview() {
     ComposeAndroidTheme {
-        ConstraintContent()
+        LargeConstraintLayout()
     }
 }
