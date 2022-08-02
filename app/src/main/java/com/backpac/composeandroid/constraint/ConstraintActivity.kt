@@ -39,11 +39,12 @@ fun ConstraintContent() {
 
         Text("Text", Modifier.constrainAs(text) {
             top.linkTo(button.bottom, margin = 16.dp)
+            centerHorizontallyTo(parent)
         })
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun Preview() {
     ComposeAndroidTheme {
