@@ -35,6 +35,9 @@
             android:exported="true" />
 
         <activity android:name=".stagger.StaggerActivity"
+            android:exported="true" />
+
+        <activity android:name=".slide.SlideActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
