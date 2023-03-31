@@ -39,6 +39,11 @@
 
         <activity android:name=".slide.SlideActivity"
             android:exported="true" >
+
+        </activity>
+
+        <activity android:name=".slot.SlotActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
